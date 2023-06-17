@@ -1,4 +1,10 @@
-node_modules
-readme-images
-.vscode
-.DS_Store
+# Folder with this name will be ignored
+**/.idea/
+**/.next/
+**/.vscode/
+**/node_modules/
+**/dist/
+
+# Files with this name will be ignored
+**/.DS_Store
+**/.env

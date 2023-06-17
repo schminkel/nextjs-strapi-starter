@@ -22,13 +22,18 @@ export async function fetchAPI(
       `/api${path}${queryString ? `?${queryString}` : ""}`
     )}`;
 
+    // console.log("## mergedOptions: ", mergedOptions);
+    // console.log("## requestUrl: ", requestUrl);
+    // console.log("## queryString: ", queryString);
+
     // Trigger API call
     const response = await fetch(requestUrl, mergedOptions);
     const data = await response.json();
     return data;
-    
   } catch (error) {
     console.error(error);
-    throw new Error(`Please check if your server is running and you set all the required tokens.`);
+    throw new Error(
+      `Please check if your server is running and you set all the required tokens.`
+    );
   }
 }
